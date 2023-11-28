@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300&display=swap');
+
+*,
+body,
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+header {
+    margin: 5rem auto;
+}
+
+header img {
+    width: 290px;
+}
+
+.mainBox {
+    width: 777px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+.mainBox h1 {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+}
+
+.boxHeader {
+    padding: 2rem;
+}
+
+.mainBox hr {
+    background-color: rgba(222, 222, 222, 1);
+}
+
+.boxBody {
+    padding: 6rem 1rem;
+}
+
+.boxBody input {
+    width: 576px;
+    height: 53px;
+    border-radius: 5px;
+    margin-bottom: 3.5rem;
+    padding: 1rem;
+    border: 1px solid rgba(202, 202, 202, 1);
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.boxBody button {
+    width: 284px;
+    height: 55px;
+    border-radius: 5px;
+    background: rgba(220, 184, 91, 1);
+    border: none;
+
+}
+
+.boxBody button a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.boxBody .stars {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem auto;
+}
+
+.boxBody h1 {
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    text-align: center;
+}
+
+.boxBody textarea {
+    width: 576px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    border: 1px solid rgba(202, 202, 202, 1);
+    color: rgba(202, 202, 202, 1);
+    padding: 1rem;
+}
+
+.boxBody .buttons {
+    width: 576px;
+    display: flex;
+    margin: 3rem auto;
+    justify-content: space-between;
+}
+
+.boxBody .buttons button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.boxBody .buttons .noButton {
+    background: rgba(45, 45, 45, 1);
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.stars i {
+    color: #e6e6e6;
+    font-size: 35px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.stars i.active {
+    color: #DCB85B;
+}
+
+@media(max-width:800px) {
+    .mainBox {
+        width: 577px;
+    }
+
+    .mainBox h1 {
+        font-size: 24px;
+    }
+
+    .boxBody input {
+        width: 477px;
+    }
+
+    .boxBody .buttons {
+        width: 476px;
+    }
+
+    .boxBody .buttons button {
+        width: 221px;
+    }
+
+    .boxBody textarea {
+        width: 476px;
+    }
+}
+
+@media(max-width:625px) {
+
+    header img {
+        width: 226px;
+    }
+
+    .mainBox {
+        width: 314px;
+    }
+
+    .mainBox h1 {
+        font-size: 16px;
+    }
+
+    .boxBody input {
+        font-size: 10px;
+        width: 278px;
+    }
+
+    .boxBody .stars {
+        width: 250px;
+    }
+
+    .boxHeader {
+        padding: 2rem 1rem;
+    }
+
+    .boxBody button {
+        width: 199px;
+    }
+
+    .boxBody button a {
+        font-size: 14px;
+    }
+}

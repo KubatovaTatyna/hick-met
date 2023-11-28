@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <img src="./images/logo.svg" alt="logo">
+    </header>
+    <div class="namePage mainBox">
+        <div class="boxHeader">
+            <h1>Оцените отель</h1>
+        </div>
+        <hr>
+        <div class="boxBody">
+            <h1>МЕДИА</h1>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="submitButton"><a href="#">Оценить</a></button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+
+    <script>
+        let submitButton = document.querySelector('button.submitButton');
+
+        submitButton.addEventListener('click',  (event) => {
+            event.preventDefault();
+            window.open('/gid.html', '_self')
+        })
+    </script>
+</body>
+</html>
