@@ -172,7 +172,7 @@ header img {
     }
 
     .mainBox {
-        width: 314px;
+        width: 344px;
     }
 
     .mainBox h1 {
@@ -186,6 +186,7 @@ header img {
 
     .boxBody .stars {
         width: 250px;
+        margin: 3rem auto;
     }
 
     .boxHeader {
@@ -198,5 +199,21 @@ header img {
 
     .boxBody button a {
         font-size: 14px;
+    }
+
+    .stars i {
+        font-size: 30px;
+    }
+
+    .boxBody .buttons {
+        width: 278px;
+    }
+
+    .boxBody .buttons button {
+        width: 131px;
+    }
+
+    .boxBody textarea {
+        width: 278px;
     }
 }
