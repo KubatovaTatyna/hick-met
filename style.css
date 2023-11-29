@@ -305,7 +305,7 @@ header img {
     }
 
     .stars i {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .boxBody textarea {
@@ -316,5 +316,10 @@ header img {
         width: 199px;
         height: 33px;
         font-size: 14px;
+    }
+
+    .boxBody .questions .question input {
+        width: 5px;
+        height: 5px;
     }
 }
