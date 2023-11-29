@@ -58,6 +58,10 @@
                         }
                     });
 
+                    if (selectedRating <= 3) {
+                        window.location.href = "mediaQuestions.html";
+                    }
+
                     // Enable the submit button
                     submitBtn.disabled = false;
                     toggleActiveClass();
@@ -69,11 +73,12 @@
                     alert("Please choose a star rating.");
                 } else if (selectedRating > 3) {
                     window.location.href = "gid.html";
-                } else {
-                    // Redirect to the next page with new rating stars
-                    // const newRatingPage = `newRating.html?rating=${selectedRating}`;
-                    window.location.href = 'mediaQuestions.html';
-                }
+                } 
+                // else {
+                //     // Redirect to the next page with new rating stars
+                //     // const newRatingPage = `newRating.html?rating=${selectedRating}`;
+                //     window.location.href = 'mediaQuestions.html';
+                // }
             });
         });
     </script>

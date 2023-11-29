@@ -57,6 +57,10 @@
                         }
                     });
 
+                    if (selectedRating <= 3) {
+                        window.location.href = "careQuestions.html";
+                    }
+
                     // Enable the submit button
                     submitBtn.disabled = false;
                     toggleActiveClass();
@@ -68,11 +72,12 @@
                     alert("Please choose a star rating.");
                 } else if (selectedRating > 3) {
                     window.location.href = "download.html";
-                } else {
-                    // Redirect to the next page with new rating stars
-                    // const newRatingPage = `newRating.html?rating=${selectedRating}`;
-                    window.location.href = 'careQuestions.html';
-                }
+                } 
+                // else {
+                //     // Redirect to the next page with new rating stars
+                //     // const newRatingPage = `newRating.html?rating=${selectedRating}`;
+                //     window.location.href = 'careQuestions.html';
+                // }
             });
         });
     </script>
