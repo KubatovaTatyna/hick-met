@@ -181,6 +181,13 @@ header img {
     text-align: right;
 }
 
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+}
+
 @media(max-width:800px) {
     .mainBox {
         width: 577px;
