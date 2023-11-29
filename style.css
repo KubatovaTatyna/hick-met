@@ -283,7 +283,7 @@ header img {
     }
 
     .boxBody input {
-        font-size: 10px;
+        font-size: 16px;
         width: 278px;
     }
 
@@ -310,6 +310,7 @@ header img {
 
     .boxBody textarea {
         width: 234px;
+        font-size: 16px;
     }
 
     .boxBody button {
