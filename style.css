@@ -320,7 +320,7 @@ header img {
     }
 
     .boxBody .questions .question input {
-        width: 1px;
-        height: 1px;
+        width: 10px;
+        height: 10px;
     }
 }
