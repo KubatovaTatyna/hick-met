@@ -161,6 +161,7 @@ header img {
     width: 20px;
     height: 20px;
     margin: .2rem .2rem;
+    accent-color:  rgba(220, 184, 91, 1);
 }
 
 .questions textarea {
