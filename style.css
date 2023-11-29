@@ -93,35 +93,6 @@ header img {
     text-align: center;
 }
 
-.boxBody textarea {
-    width: 576px;
-    border-radius: 5px;
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    border: 1px solid rgba(202, 202, 202, 1);
-    color: rgba(202, 202, 202, 1);
-    padding: 1rem;
-}
-
-.boxBody .buttons {
-    width: 576px;
-    display: flex;
-    margin: 3rem auto;
-    justify-content: space-between;
-}
-
-.boxBody .buttons button {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: #fff;
-}
-
-.boxBody .buttons .noButton {
-    background: rgba(45, 45, 45, 1);
-}
-
 .stars {
     display: flex;
     align-items: center;
@@ -150,18 +121,6 @@ header img {
 
     .boxBody input {
         width: 477px;
-    }
-
-    .boxBody .buttons {
-        width: 476px;
-    }
-
-    .boxBody .buttons button {
-        width: 221px;
-    }
-
-    .boxBody textarea {
-        width: 476px;
     }
 }
 
@@ -203,17 +162,5 @@ header img {
 
     .stars i {
         font-size: 30px;
-    }
-
-    .boxBody .buttons {
-        width: 278px;
-    }
-
-    .boxBody .buttons button {
-        width: 131px;
-    }
-
-    .boxBody textarea {
-        width: 278px;
     }
 }
