@@ -22,24 +22,19 @@
             <form action="/mekka.html" id="nameForm" target="_blank">
                 <input type="text" placeholder="Имя Фамилия" id="name" required>
             </form>
-            <button id="submitButton"><a href="#">Подтвердить</a></button>
+            <button id="submitBtn">Подтвердить</button>
         </div>
     </div>
     <!-- <script src="./script.js"></script> -->
-    <script>
-        let nameForm = document.querySelector('form#nameForm');
-        let submitButton = document.querySelector('button#submitButton');
-        let warning = document.getElementsByClassName('warning');
+    <script>document.addEventListener("DOMContentLoaded", function () {
+            const submitBtn = document.getElementById("submitBtn");
 
-        submitButton.addEventListener('click',  (event) => {
-            event.preventDefault();
+            let selectedRating = 0;
 
-            let name = document.querySelector('input#name');
-        
-            console.log(name.value);
-
-            window.open('/mekka.html', '_self')
-        })
+            submitBtn.addEventListener("click", function () {
+                window.location.href = "mekka.html";
+            });
+        });
     </script>
 </body>
 

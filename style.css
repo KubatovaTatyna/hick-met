@@ -11,10 +11,15 @@ html {
 body {
     text-align: center;
     margin: 0 auto;
+    background-image: url(./images/background.JPEG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 header {
-    margin: 5rem auto;
+    margin: 3.5rem auto;
 }
 
 header img {
@@ -46,7 +51,7 @@ header img {
 }
 
 .boxBody {
-    padding: 6rem 1rem;
+    padding: 3rem 1rem;
 }
 
 .boxBody input {
@@ -66,15 +71,20 @@ header img {
     border-radius: 5px;
     background: rgba(220, 184, 91, 1);
     border: none;
-
+    cursor: pointer;
 }
 
-.boxBody button a {
+.boxBody button{
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 500;
+}
+
+#submitBtn.active {
+    background-color: rgba(220, 184, 91, 1);
+    cursor: pointer;
 }
 
 .boxBody .stars {
@@ -110,6 +120,66 @@ header img {
     color: #DCB85B;
 }
 
+
+.boxBody textarea {
+    width: 576px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    border: 1px solid rgba(202, 202, 202, 1);
+    color: rgba(202, 202, 202, 1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.questions {
+    padding-left: 2rem;
+    text-align: left;
+}
+
+.questions .question {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 1rem 0;
+}
+
+.question label {
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.question input {
+    width: 20px;
+    height: 20px;
+    margin: .2rem .2rem;
+}
+
+.questions textarea {
+    width: 576px;
+}
+
+.circleCheck {
+    margin: 2rem 0;
+}
+
+.numOfPage {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color:#BABABA;
+    margin-top: .3rem;
+    text-align: right;
+}
+
 @media(max-width:800px) {
     .mainBox {
         width: 577px;
@@ -121,6 +191,10 @@ header img {
 
     .boxBody input {
         width: 477px;
+    }
+
+    .boxBody textarea {
+        width: 476px;
     }
 }
 
@@ -145,7 +219,77 @@ header img {
 
     .boxBody .stars {
         width: 250px;
-        margin: 3rem auto;
+        margin: 1.8rem auto;
+    }
+
+    .boxHeader {
+        padding: 2rem 1rem;
+    }
+
+    .boxBody button {
+        width: 199px;
+        height: 33px;
+        font-size: 14px;
+    }
+
+    .boxBody button a {
+        font-size: 14px;
+    }
+
+    .stars i {
+        font-size: 30px;
+    }
+
+    .boxBody textarea {
+        width: 254px;
+        font-size: 10px;
+        height: 121px;
+        padding: .1rem;
+    }
+
+    .questions .question {
+        margin: 1.1rem 0;
+    }
+
+    .questions .question label {
+        font-size: 12px;
+    }
+
+    .boxBody .questions .question input {
+        width: 10px;
+        height: 10px;
+    }
+
+    .boxBody .questions textarea {
+        width: 250px;
+        height: 31px;
+    }
+}
+
+@media(max-width:400px) {
+    header img {
+        width: 196px;
+    }
+
+    .boxBody {
+        padding: 3rem .5rem;
+    }
+    .mainBox {
+        width: 314px;
+    }
+
+    .mainBox h1 {
+        font-size: 16px;
+    }
+
+    .boxBody input {
+        font-size: 10px;
+        width: 278px;
+    }
+
+    .boxBody .stars {
+        width: 200px;
+        margin: 1.1rem auto;
     }
 
     .boxHeader {
@@ -161,6 +305,16 @@ header img {
     }
 
     .stars i {
-        font-size: 30px;
+        font-size: 20px;
+    }
+
+    .boxBody textarea {
+        width: 234px;
+    }
+
+    .boxBody button {
+        width: 199px;
+        height: 33px;
+        font-size: 14px;
     }
 }

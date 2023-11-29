@@ -16,11 +16,11 @@
     </header>
     <div class="namePage mainBox">
         <div class="boxHeader">
-            <h1>Оцените гида</h1>
+            <h1>Оцените отель</h1>
         </div>
         <hr>
         <div class="boxBody">
-            <h1>Работа гида</h1>
+            <h1>МЕДИА</h1>
             <div class="stars">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -28,11 +28,25 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
             </div>
-            <textarea rows="5" cols="1">Другое</textarea>
+            <form action="" name="questions" class="questions">
+                <div class="question">
+                    <input type="radio" id="e">
+                    <label for="e">Неудовлетворительная работа администраторов</label>
+                </div>
+                <div class="question">
+                    <input type="radio" id="e1">
+                    <label for="e1">Задержка транспорта в аэропорту</label>
+                </div>
+                <div class="question">
+                    <input type="radio" id="e2">
+                    <label for="e2">Отсутсвие питания в номерах</label>
+                </div>
+            </form>
             <button id="submitBtn" disabled>Далее</button>
             <div class="numOfPage">3/5</div>
         </div>
     </div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const stars = document.querySelectorAll(".stars i");
@@ -64,17 +78,10 @@
             });
 
             submitBtn.addEventListener("click", function () {
-                if (selectedRating === 0) {
-                    alert("Please choose a star rating.");
-                } else if (selectedRating > 3) {
                     window.location.href = "manager.html";
-                } else {
-                    // Redirect to the next page with new rating stars
-                    // const newRatingPage = `newRating.html?rating=${selectedRating}`;
-                    window.location.href = 'gidQuestions.html';
-                }
             });
         });
+
     </script>
 </body>
 

@@ -28,26 +28,54 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
             </div>
-            <button id="submitButton"><a href="#">Оценить</a></button>
+            <textarea rows="5" cols="1">Другое</textarea>
+            <button id="submitBtn" disabled>Далее</button>
+            <div class="numOfPage">4/5</div>
         </div>
     </div>
-    <script src="./script.js"></script>
+
     <script>
-        // const stars = document.querySelectorAll(".stars i");
-        // stars.forEach((star, index1) => {
-        //     star.addEventListener("click", () => {
-        //         stars.forEach((star, index2) => {
-        //             index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
-        //         });
-        //     });
-        // });
+        document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".stars i");
+            const submitBtn = document.getElementById("submitBtn");
 
-        let submitButton = document.querySelector('button#submitButton');
+            let selectedRating = 0;
 
-        submitButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            window.open('/care.html', '_self')
-        })
+            function toggleActiveClass() {
+                submitBtn.classList.add("active");
+            }
+
+            stars.forEach((star, index) => {
+                star.addEventListener("click", function () {
+                    selectedRating = index + 1;
+
+                    // Remove existing filled stars
+                    stars.forEach((s, i) => {
+                        if (i < selectedRating) {
+                            s.classList.add("active");
+                        } else {
+                            s.classList.remove("active");
+                        }
+                    });
+
+                    // Enable the submit button
+                    submitBtn.disabled = false;
+                    toggleActiveClass();
+                });
+            });
+
+            submitBtn.addEventListener("click", function () {
+                if (selectedRating === 0) {
+                    alert("Please choose a star rating.");
+                } else if (selectedRating > 3) {
+                    window.location.href = "care.html";
+                } else {
+                    // Redirect to the next page with new rating stars
+                    // const newRatingPage = `newRating.html?rating=${selectedRating}`;
+                    window.location.href = 'managerQuestions.html';
+                }
+            });
+        });
     </script>
 </body>
 

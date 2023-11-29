@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
+
 <body>
     <header>
         <img src="./images/logo.svg" alt="logo">
@@ -26,18 +28,55 @@
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
             </div>
-            <button class="submitButton"><a href="#">Оценить</a></button>
+            <textarea rows="5" cols="1">Другое</textarea>
+            <button id="submitBtn" disabled>Далее</button>
+            <div class="numOfPage">2/5</div>
         </div>
     </div>
-    <script src="./script.js"></script>
 
     <script>
-        let submitButton = document.querySelector('button.submitButton');
+        document.addEventListener("DOMContentLoaded", function () {
+            const stars = document.querySelectorAll(".stars i");
+            const submitBtn = document.getElementById("submitBtn");
 
-        submitButton.addEventListener('click',  (event) => {
-            event.preventDefault();
-            window.open('/gid.html', '_self')
-        })
+            let selectedRating = 0;
+
+            function toggleActiveClass() {
+                submitBtn.classList.add("active");
+            }
+
+            stars.forEach((star, index) => {
+                star.addEventListener("click", function () {
+                    selectedRating = index + 1;
+
+                    // Remove existing filled stars
+                    stars.forEach((s, i) => {
+                        if (i < selectedRating) {
+                            s.classList.add("active");
+                        } else {
+                            s.classList.remove("active");
+                        }
+                    });
+
+                    // Enable the submit button
+                    submitBtn.disabled = false;
+                    toggleActiveClass();
+                });
+            });
+
+            submitBtn.addEventListener("click", function () {
+                if (selectedRating === 0) {
+                    alert("Please choose a star rating.");
+                } else if (selectedRating > 3) {
+                    window.location.href = "gid.html";
+                } else {
+                    // Redirect to the next page with new rating stars
+                    // const newRatingPage = `newRating.html?rating=${selectedRating}`;
+                    window.location.href = 'mediaQuestions.html';
+                }
+            });
+        });
     </script>
 </body>
+
 </html>
