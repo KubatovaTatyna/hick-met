@@ -16,11 +16,11 @@
     </header>
     <div class="namePage mainBox">
         <div class="boxHeader">
-            <h1>Оцените отель</h1>
+            <h1 class="title"></h1>
         </div>
         <hr>
         <div class="boxBody">
-            <h1>МЕККА</h1>
+            <h1 class="questionHeader"></h1>
             <div id="stars" class="stars">
                 <i class="fa-solid fa-star" data-value="1"></i>
                 <i class="fa-solid fa-star" data-value="1"></i>
@@ -28,12 +28,22 @@
                 <i class="fa-solid fa-star" data-value="1"></i>
                 <i class="fa-solid fa-star" data-value="1"></i>
             </div>
-            <textarea rows="5" cols="1">Другое</textarea>
-            <button id="submitBtn" disabled>Далее</button>
-            <div class="numOfPage">1/5</div>
+            <textarea rows="5" cols="1" placeholder="Другое" class="anotherText"></textarea>
+            <button id="submitBtn" class="firstSubmitButton">Далее</button>
+            <div class="numOfPage"></div>
         </div>
+
+        <form action="" name="questions" class="questions">
+            <!-- <div class="question">
+                <input type="radio" class="answerInput">
+                <label class="answerText"></label>
+            </div> -->
+            <textarea name="another" id="another" cols="3" rows="1">Другое</textarea>
+            <button id="secondSubmitBtn">Далее</button>
+        </form>
     </div>
-    <script>
+    <script src="./script.js"></script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function () {
             const stars = document.querySelectorAll(".stars i");
             const submitBtn = document.getElementById("submitBtn");
@@ -60,7 +70,7 @@
                     if (selectedRating <= 3) {
                         window.location.href = "mekkaQuestions.html";
                     }
-                    
+
                     // Enable the submit button
                     submitBtn.disabled = false;
                     toggleActiveClass();
@@ -81,7 +91,7 @@
             });
         });
 
-    </script>
+    </script> -->
 </body>
 
 </html>

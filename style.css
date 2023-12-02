@@ -65,16 +65,14 @@ header img {
     font-family: 'Montserrat', sans-serif;
 }
 
-.boxBody button {
+.boxBody button, 
+#secondSubmitBtn {
     width: 284px;
     height: 55px;
     border-radius: 5px;
     background: rgba(220, 184, 91, 1);
     border: none;
     cursor: pointer;
-}
-
-.boxBody button{
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
@@ -134,8 +132,21 @@ header img {
 }
 
 .questions {
+    display: none;
     padding-left: 2rem;
     text-align: left;
+}
+
+.questions.active {
+    display: block;
+}
+
+.anotherText.notActive {
+    display: none;
+}
+
+.firstSubmitButton.notActive {
+    display: none;
 }
 
 .questions .question {
@@ -147,7 +158,7 @@ header img {
     margin: 1rem 0;
 }
 
-.question label {
+.answerText {
     font-family: 'Montserrat', sans-serif;
     display: block;
     width: 100%;
@@ -157,7 +168,7 @@ header img {
     text-align: left;
 }
 
-.question input {
+.answerInput{
     width: 20px;
     height: 20px;
     margin: .2rem .2rem;
